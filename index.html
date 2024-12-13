@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>防災クイズ　火災編</title>
+  <link rel="stylesheet" href="style.css"> <!-- CSSファイルを読み込み -->
+</head>
+<body>
+
+<!-- 問題ページ -->
+<div class="container active" id="question-page">
+  <h1>問題</h1>
+  <div id="question-container"></div>
+  <button id="answer-btn">回答する</button>
+  <div class="progress-bar">
+    <div class="progress" id="progress"></div>
+  </div>
+  <div class="progress-text" id="progress-text">0%</div>
+</div>
+
+<!-- 解説ページ -->
+<div class="container" id="explanation-page">
+  <h1>解説</h1>
+  <div id="selected-answer"></div>
+  <div id="explanation"></div>
+  <button id="next-btn">次の問題へ</button>
+</div>
+
+<!-- 結果ページ -->
+<div class="container" id="result-page">
+  <h1>結果</h1>
+  <div id="result"></div>
+  <div id="comment"></div>
+  <button id="share-btn">スコアをシェアする</button>
+</div>
+
+ <!-- SNSボタン -->
+ <div id="sns-buttons" style="display: none; margin-top: 20px;">
+  <button id="twitter-share">Twitterでシェア</button>
+  <button id="facebook-share">Facebookでシェア</button>
+</div>
+<script src="script.js" defer></script> <!-- JavaScriptファイルを読み込み -->
+</body>
+</html>
+

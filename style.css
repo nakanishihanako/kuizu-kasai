@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    overflow-x: hidden;
+  }
+  
+  .container {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: white;
+    max-width: 600px;
+    margin: 50px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* 解説ページのスタイル調整 */
+  #selected-answer {
+    margin-bottom: 15px;
+    line-height: 1.8;
+    font-size: 18px;
+    color: #333;
+  }
+
+  #explanation {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 10px 0 20px 0;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+  }
+  
+  label {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  label:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .correct {
+    background-color: #4CAF50;
+    color: white;
+    animation: flash-correct 0.5s alternate;
+  }
+  
+  .incorrect {
+    background-color: #F44336;
+    color: white;
+    animation: flash-incorrect 0.5s alternate;
+  }
+  
+  @keyframes flash-correct {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+  
+  @keyframes flash-incorrect {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.9); }
+    100% { transform: scale(1); }
+  }
+  
+  button {
+    display: block;
+    margin: 15px auto;
+    padding: 15px;
+    border: none;
+    background-color: #87CEEB;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 300px;
+  }
+  
+  button:hover {
+    background-color: #5FA9D9;
+  }
+  
+  .progress-bar {
+    margin-top: 10px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    height: 20px;
+    overflow: hidden;
+  }
+  
+  .progress {
+    height: 100%;
+    width: 0%;
+    background-color: #f2de2a;
+    transition: width 0.5s ease-in-out;
+  }
+  
+  .progress-text {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 5px;
+  }
+  
